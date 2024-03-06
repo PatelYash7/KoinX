@@ -1,6 +1,7 @@
 import Chartsection from "./Chartsection";
 import Navigation from "./Navigation";
 import Offersection from "./Offersection";
+import PerformanceSection from "./PerformanceSection";
 import TrendingSection from "./TrendingSection";
 
 function Cardcontent() {
@@ -10,6 +11,7 @@ function Cardcontent() {
       <div className=" w-[93%] h-fit">
         <Chartsection/>
         <Navigation/>
+        <PerformanceSection/>
       </div>
 
       {/* Right Section */}

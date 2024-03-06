@@ -1,7 +1,11 @@
 // TradingViewWidget.tsx
 import { useEffect, useRef, memo } from 'react';
+interface Props{
+  symbol:string
+}
 
-function TradingViewWidget() {
+function TradingViewWidget(props:Props) {
+  
   const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -13,7 +17,7 @@ function TradingViewWidget() {
       {
         "width": "900",
         "height": "350",
-        "symbol": "BITSTAMP:BTCUSD",
+        "symbol": "BITSTAMP:${props.symbol}USD",
         "interval": "180",
         "timezone": "Asia/Kolkata",
         "theme": "light",

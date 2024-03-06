@@ -584,4 +584,17 @@ function TriangleSVG(): JSX.Element {
     </svg>
   );
 }
-export { SideArrowSVG, OfferSVG, TriangleSVG,DownTriangle };
+function SliderTriangleSVG(): JSX.Element {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="12"
+      height="8"
+      viewBox="0 0 11 8"
+      fill="none"
+    >
+      <path d="M5.5 0L11 8H0L5.5 0Z" fill="#000" />
+    </svg>
+  );
+}
+export { SideArrowSVG, OfferSVG, TriangleSVG,DownTriangle,SliderTriangleSVG };

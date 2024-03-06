@@ -16,7 +16,6 @@ interface Item {
 
 function TrendingList() {
     const data= fetchData();
-    console.log(data)
   return (
     <div>
         {data.map((item)=>{

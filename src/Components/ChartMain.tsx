@@ -1,11 +1,12 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { DownTriangle, TriangleSVG } from "../Resources/Svg";
+import { TriangleSVG } from "../Resources/Svg";
 
 function ChartMain() {
   const response = fetchData();
-  const {rupee,USD,Change,isPositive} = response;
+  const {rupee,USD,Change,isPositive} = response
   
+  console.log(response)
   return (
     <div>
       {/* Header */}
@@ -14,7 +15,7 @@ function ChartMain() {
           <div className="font-semibold text-[28px]">{USD}</div>
           <div className="text-base font-medium ">{rupee}</div>
         </div>
-        {isPositive? (
+        {isPositive ? (
           <div className="flex gap-3 ">
           <div className="text-base font-medium text-center h-fit text-[#14B079] gap-2 rounded px-2  bg-green-100 mt-2 flex items-center">
               <TriangleSVG/>
@@ -28,9 +29,9 @@ function ChartMain() {
         ) : (
           <div className="flex gap-3 ">
             <div className="flex items-center gap-2 px-2 mt-2 text-base font-medium text-center text-red-700 bg-red-100 rounded h-fit">
-              <div className="text-red-700 w-[11px] h-[8px]  text-center">
+              <div className="text-red-700 w-[11px] h-[8px] mb-1 text-center">
                 {/* DownTriangle */}
-                <DownTriangle/>
+                <TriangleSVG/>
               </div>
               {Change}%
             </div>

@@ -18,7 +18,7 @@ export default {
         buttonTxt:'#1B4AEF',
         mainBg:'rgba(239, 242, 245, 1)',
         textLgt:'#5D667B',
-        offerBg:'#0052FE'
+        offerBg:'#0052FE',
       }
     },
   },
