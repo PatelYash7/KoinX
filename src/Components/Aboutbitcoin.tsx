@@ -55,7 +55,7 @@ function Abourbitcoin() {
             <CardRight />
           </div>
         </div>
-        <div className="mb-4">
+        <div className="mb-4 text-base font-medium text-mainText">
           Fermentum hendrerit imperdiet nulla viverra faucibus. Sit aliquam
           massa vel convallis duis ac. Mi adipiscing semper scelerisque
           porttitor pulvinar nunc risus. Fermentum potenti iaculis lacinia

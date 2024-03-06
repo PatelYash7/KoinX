@@ -19,7 +19,8 @@ export default {
         mainBg:'rgba(239, 242, 245, 1)',
         textLgt:'#5D667B',
         offerBg:'#0052FE',
-        headingColor:'#0F1629'
+        headingColor:'#0F1629',
+        mainText:'#3E424A'
       }
     },
   },
