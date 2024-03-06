@@ -1,3 +1,4 @@
+import Abourbitcoin from "./Aboutbitcoin";
 import Chartsection from "./Chartsection";
 import Navigation from "./Navigation";
 import Offersection from "./Offersection";
@@ -15,7 +16,7 @@ function Cardcontent() {
           <Navigation />
           <PerformanceSection />
           <Sentiment/>
-          <Sentiment/>
+          <Abourbitcoin/>
         </div>
       </div>
 
