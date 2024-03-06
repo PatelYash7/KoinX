@@ -1,6 +1,6 @@
 function Navigation() {
   return (
-    <div className="flex items-center justify-start gap-8 my-5 bg-transparent border-b ">
+    <div className="flex items-center justify-start gap-8 mt-5 bg-transparent border-b ">
         <div className="text-base font-semibold text-[#0141CF] cursor-pointer border-b-[3px] border-b-[#0052FE] py-2">Overview</div>
 
         {['Fundamentals','News Insights','Sentiments','Team','Technicals',

@@ -3,8 +3,8 @@ import { SliderTriangleSVG } from "../Resources/Svg";
 
 function PerformanceSection() {
   return (
-    <div className="flex flex-col gap-6 p-6 my-5 bg-white rounded-lg">
-      <div className="text-2xl font-semibold text-[#0F1629]">Performace</div>
+    <div className="flex flex-col gap-6 p-6 bg-white rounded-lg">
+      <div className="text-2xl font-semibold text-headingColor">Performace</div>
       {/* Lines */}
       <div className="flex flex-col gap-7">
         {/* First */}
