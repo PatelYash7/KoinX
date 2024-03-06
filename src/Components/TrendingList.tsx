@@ -20,16 +20,16 @@ function TrendingList() {
     <div>
         {data.map((item)=>{
             return <div key={item.coin_id} className="flex items-center justify-between my-4">
-                <div className="flex items-start justify-start gap-1 rounded-md">
+                <div className="flex items-start justify-start gap-2 rounded-md">
                     <img src={item.large} className="w-6 h-6" alt="logo" />
-                    <div className="flex items-center gap-3 text-base font-medium" >
-                        <div>{item.name}</div>
-                        <div>({item.symbol})</div>
+                    <div className="flex items-center justify-center gap-1 text-base font-medium" >
+                        <div className="">{item.name}</div>
+                        <div className="font-semibold">({item.symbol})</div>
                     </div>
                 </div>
                 { 
                     item.price_change_percentage_24h.usd > 0 ? <div className="flex gap-3 w-[90px] items-center justify-center">
-                    <div className=" text-sm text-center font-normal h-fit text-[#14B079] gap-2 rounded px-2  bg-green-100 mt-2 flex items-center">
+                    <div className=" text-sm text-center font-normal h-fit text-[#14B079] gap-2 rounded px-2 w-full   bg-green-100 mt-2 flex items-center">
                         <TriangleSVG/>
                       {item.price_change_percentage_24h.usd.toFixed(2)}%
                     </div>

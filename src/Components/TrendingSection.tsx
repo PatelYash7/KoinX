@@ -6,10 +6,7 @@ function TrendingSection() {
         <div className="text-2xl font-semibold">
             Trending Coins (24h)
         </div>
-        
         <TrendingList/>
-        
-        
     </div>
   )
 }
