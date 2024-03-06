@@ -8,7 +8,6 @@ function Chartsection() {
   return (
     <div className="flex flex-col gap-10 p-6 bg-white rounded-md">
       <Charthead />
-
       <ChartMain />
       <div>
         <div className="p-[1px] mb-6 w-[900px]  bg-[#DEE1E6]"></div>
