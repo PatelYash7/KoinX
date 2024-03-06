@@ -6,7 +6,6 @@ function ChartMain() {
   const response = fetchData();
   const {rupee,USD,Change,isPositive} = response;
   
-  console.log(response)
   return (
     <div>
       {/* Header */}

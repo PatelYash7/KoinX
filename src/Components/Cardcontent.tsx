@@ -1,5 +1,6 @@
 import Chartsection from "./Chartsection";
 import Offersection from "./Offersection";
+import TrendingSection from "./TrendingSection";
 
 function Cardcontent() {
   return (
@@ -11,7 +12,8 @@ function Cardcontent() {
 
       {/* Right Section */}
       <div className=" flex flex-col gap-5 w-[40%]"> 
-           <Offersection/>  
+           <Offersection/>
+           <TrendingSection/>  
       </div>
     </div>
   );
