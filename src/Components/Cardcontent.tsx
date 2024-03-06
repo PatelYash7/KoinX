@@ -11,10 +11,7 @@ function Cardcontent() {
 
       {/* Right Section */}
       <div className=" flex flex-col gap-5 w-[40%]"> 
-      
-
-           <Offersection/>
-      
+           <Offersection/>  
       </div>
     </div>
   );

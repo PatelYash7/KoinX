@@ -2,11 +2,13 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './Pages/Home'
+import Error from './Pages/Error'
 
 const router = createBrowserRouter([
   {
     path:'/',
-    element:<Home/>
+    element:<Home/>,
+    errorElement:<Error/>
   },{
     path:'/bitcoin',
     element:<Home/>
