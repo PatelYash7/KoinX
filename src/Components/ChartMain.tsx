@@ -2,11 +2,16 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { TriangleSVG } from "../Resources/Svg";
 
+interface Props {
+  Change: string;
+  isPositive: boolean;
+}
+
 function ChartMain() {
   const response = fetchData();
-  const {rupee,USD,Change,isPositive} = response
-  
-  console.log(response)
+  const { rupee, USD, Change, isPositive } = response;
+
+  console.log(response);
   return (
     <div>
       {/* Header */}
@@ -15,37 +20,39 @@ function ChartMain() {
           <div className="font-semibold text-[28px]">{USD}</div>
           <div className="text-base font-medium ">{rupee}</div>
         </div>
-        {isPositive ? (
-          <div className="flex gap-3 ">
-          <div className="text-base font-medium text-center h-fit text-[#14B079] gap-2 rounded px-2  bg-green-100 mt-2 flex items-center">
-              <TriangleSVG/>
-            {Change}%
-          </div>
-
-          <div className="pt-2  text-sm text-[#768396] font-medium">
-              (24H)
-          </div>
-        </div>
-        ) : (
-          <div className="flex gap-3 ">
-            <div className="flex items-center gap-2 px-2 mt-2 text-base font-medium text-center text-red-700 bg-red-100 rounded h-fit">
-              <div className="text-red-700 w-[11px] h-[8px] mb-1 text-center">
-                {/* DownTriangle */}
-                <TriangleSVG/>
-              </div>
-              {Change}%
-            </div>
-
-            <div className="pt-2  text-sm text-[#768396] font-medium">
-                (24H)
-            </div>
-          </div>
-        )}
+        <NegativeChange Change={Change} isPositive={isPositive} />
       </div>
     </div>
   );
 }
+function NegativeChange(props: Props) {
+  const { Change, isPositive } = props;
+  if (isPositive) {
+    return (
+      <div className="flex gap-3 ">
+        <div className="text-base font-medium text-center h-fit text-[#14B079] gap-2 rounded px-2  bg-green-100 mt-2 flex items-center">
+          <TriangleSVG />
+          {Change}%
+        </div>
 
+        <div className="pt-2  text-sm text-[#768396] font-medium">(24H)</div>
+      </div>
+    );
+  }
+  return (
+    <div className="flex gap-3 ">
+      <div className="flex items-center gap-2 px-2 mt-2 text-base font-medium text-center text-red-700 bg-red-100 rounded h-fit">
+        <div className="text-red-700 w-[11px] h-[8px] mb-1 text-center">
+          {/* DownTriangle */}
+          <TriangleSVG />
+        </div>
+        {Change}%
+      </div>
+
+      <div className="pt-2  text-sm text-[#768396] font-medium">(24H)</div>
+    </div>
+  );
+}
 const fetchData = () => {
   const [response, setResponse] = useState({
     inr: 0,
@@ -66,14 +73,14 @@ const fetchData = () => {
 
   const rupee = NumToRup(response.inr);
   const USD = NumToUSD(response.usd);
-  const isPositive = response.usd_24h_change >0;
+  const isPositive = response.usd_24h_change > 0;
   const Change = Math.abs(response.usd_24h_change).toFixed(2);
 
   return {
     rupee,
     USD,
     Change,
-    isPositive
+    isPositive,
   };
 };
 function NumToRup(number: number) {
