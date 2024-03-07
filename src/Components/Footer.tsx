@@ -59,6 +59,7 @@ function Chart(props: ChartProps) {
         </div>
         <div className="text-[#171717] font-medium text-lg">{price.match(/^(\$\d+(\.\d+)?)/)?.[0]}</div>
         <div className="flex items-center justify-center">
+        {/*  @ts-expect-error */}
           <img src={sparkLine} alt="chart" />
         </div>
       </div>
@@ -76,10 +77,11 @@ function Caraousel(props:CarouselProp) {
   const goNext = () => {
     setDefaultTransform(defaultTransform - 398);
     const slider = document.getElementById(`slider${id}`);
-
+    // @ts-expect-error
     if (Math.abs(defaultTransform) >= slider.scrollWidth / 1.7) {
       setDefaultTransform(0);
     }
+    // @ts-expect-error
     slider.style.transform = `translateX(${defaultTransform}px)`;
   };
 
@@ -90,7 +92,7 @@ function Caraousel(props:CarouselProp) {
     } else {
       setDefaultTransform(defaultTransform + 398);
     }
-
+    // @ts-expect-error
     slider.style.transform = `translateX(${defaultTransform}px)`;
   };
   return (
@@ -132,7 +134,6 @@ function Caraousel(props:CarouselProp) {
                   change={item.price_change_percentage_24h.usd}
                   price={item.price}
                   sparkLine={item.sparkline}
-                  tokenId={item.coin_id}
                 />
               );
             })}
