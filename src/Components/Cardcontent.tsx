@@ -5,6 +5,7 @@ import Offersection from "./Offersection";
 import PerformanceSection from "./PerformanceSection";
 import Sentiment from "./Sentiment";
 import Team from "./Team";
+import Tokenomics from "./Tokenomics";
 import TrendingSection from "./TrendingSection";
 
 function Cardcontent() {
@@ -18,6 +19,7 @@ function Cardcontent() {
           <PerformanceSection />
           <Sentiment/>
           <Abourbitcoin/>
+          <Tokenomics/>
           <Team/>
         </div>
       </div>

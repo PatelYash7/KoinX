@@ -1,6 +1,11 @@
 import Img from "../Resources/Png/TeamImg.png";
 import Img3 from "../Resources/Png/TeamImg2.png";
 import Img2 from "../Resources/Png/TeamImg3.png";
+
+interface Props {
+    Img: string;
+}
+
 function Team() {
   return (
     <div className="flex flex-col gap-6 p-6 pb-10 bg-white rounded-lg">
@@ -15,9 +20,6 @@ function Team() {
       <ProfileCard Img={Img3} />
     </div>
   );
-}
-interface Props {
-  Img: string;
 }
 function ProfileCard(props: Props) {
   const { Img } = props;
