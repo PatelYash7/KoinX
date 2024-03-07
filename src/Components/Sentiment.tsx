@@ -61,7 +61,7 @@ function Sentiment() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-center gap-8 mt-3 mobile:flex-row mobile:flex ">
+      <div className="flex flex-col items-center justify-center gap-8 mt-3 mobile:justify-start mobile:items-center mobile:flex-row mobile:flex ">
         <div className="bg-[#EBF9F4] text-[#0FBA83] text-4xl px-9 py-12 font-medium w-fit mobile:py-11 mt-4 mobile:px-7 mobile:text-center rounded-full">
           79%
         </div>
