@@ -13,6 +13,7 @@ interface Item {
       data: {
         price_change_percentage_24h: Record<string, number>;
         sparkline:Record<string,string>;
+        price:string
       };
     };
 }
@@ -76,7 +77,7 @@ const fetchData = () => {
       name,
       symbol,
       large,
-      data: { price_change_percentage_24h,sparkline }
+      data: { price_change_percentage_24h,sparkline,price }
     } = item.item;
     return {
       coin_id,  
@@ -84,7 +85,8 @@ const fetchData = () => {
       symbol,
       large,
       price_change_percentage_24h,
-      sparkline
+      sparkline,
+      price
     };
   });
   

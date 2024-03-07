@@ -6,6 +6,7 @@ interface CoinData {
     large: string;
     price_change_percentage_24h: Record<string, number>;
     sparkline: Record<string, string>;
+    price:string;
   }
 export const SparklineDataState = atom <Array<CoinData>>(
     {

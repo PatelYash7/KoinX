@@ -17,7 +17,7 @@ function Home() {
       </div>
 
       {/* Footer */}
-      <div className="w-full bg-white px-14">
+      <div className="w-full mt-6 bg-white px-14">
         <Footer/>
       </div>
     </div>

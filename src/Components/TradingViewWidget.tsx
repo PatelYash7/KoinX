@@ -15,7 +15,7 @@ function TradingViewWidget(props:Props) {
     script.async = true;
     script.innerHTML = `
       {
-        "width": "900",
+        "width": "auto",
         "height": "350",
         "symbol": "BITSTAMP:${props.symbol}USD",
         "interval": "180",

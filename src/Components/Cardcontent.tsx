@@ -12,7 +12,7 @@ function Cardcontent() {
   return (
     <div className="flex gap-5">
       {/* Left section */}
-      <div className=" w-[93%] h-fit">
+      <div className=" w-[70%] h-fit">
         <Chartsection />
         <div className="flex flex-col gap-5">
           <Navigation />
@@ -23,9 +23,8 @@ function Cardcontent() {
           <Team/>
         </div>
       </div>
-
       {/* Right Section */}
-      <div className=" flex flex-col gap-5 w-[40%]">
+      <div className=" flex flex-col gap-5 w-[35%]">
         <Offersection />
         <TrendingSection />
       </div>
