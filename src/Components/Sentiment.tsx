@@ -66,7 +66,7 @@ function Sentiment() {
           79%
         </div>
 
-        <div>
+        <div className="mobile:hidden">
           <img src={Lines } alt="" />
         </div>
 
