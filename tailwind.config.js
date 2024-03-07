@@ -9,7 +9,7 @@ export default {
     extend: {
       screens:{
         'mobile':"420px",
-        'tab':"820px"
+        'tab':"1024px"
       },
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],
