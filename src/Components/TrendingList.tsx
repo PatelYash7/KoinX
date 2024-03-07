@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react"
 import { DownTriangle, TriangleSVG } from "../Resources/Svg";
+import { useSetRecoilState } from "recoil";
+import { SparklineDataState } from "../Store/Atoms";
 
 interface Item {
     item: {
@@ -10,15 +12,17 @@ interface Item {
       large: string;
       data: {
         price_change_percentage_24h: Record<string, number>;
+        sparkline:Record<string,string>;
       };
     };
-  }
+}
 
 function TrendingList() {
-    const data= fetchData();
+   const data = fetchData();
+  UpdateRecoilState(data);
   return (
     <div>
-        {data.map((item)=>{
+        {data.slice(0,3).map((item)=>{
             return <div key={item.coin_id} className="flex items-center justify-between my-4">
                 <div className="flex items-start justify-start gap-2 rounded-md">
                     <img src={item.large} className="w-6 h-6" alt="logo" />
@@ -49,34 +53,42 @@ function TrendingList() {
     </div>
   )
 }
-
+function UpdateRecoilState(data:any){
+  const recoilValue = useSetRecoilState(SparklineDataState);
+  useEffect(()=>{
+    recoilValue(data);
+  })
+}
 const fetchData = () => {
   const [response, setResponse] = useState([]);
   useEffect(() => {
     axios
-      .get("https://api.coingecko.com/api/v3/search/trending")
-      .then((res) => {
-        setResponse(res.data.coins);
+    .get("https://api.coingecko.com/api/v3/search/trending")
+    .then((res) => {
+      setResponse(res.data.coins);
       });
   }, []);
   
   const data :Item[]=response;
-  const extractedData = data.slice(0, 3).map((item: Item) => {
+  const extractedData = data.map((item: Item) => {
     const {
       coin_id,  
       name,
       symbol,
       large,
-      data: { price_change_percentage_24h }
+      data: { price_change_percentage_24h,sparkline }
     } = item.item;
     return {
       coin_id,  
       name,
       symbol,
       large,
-      price_change_percentage_24h
+      price_change_percentage_24h,
+      sparkline
     };
   });
+  
+  
   return extractedData;
 };
 

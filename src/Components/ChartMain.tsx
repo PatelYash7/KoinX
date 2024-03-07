@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { TriangleSVG } from "../Resources/Svg";
+import { DownTriangle, TriangleSVG } from "../Resources/Svg";
 
 interface Props {
   Change: string;
@@ -11,7 +11,6 @@ function ChartMain() {
   const response = fetchData();
   const { rupee, USD, Change, isPositive } = response;
 
-  console.log(response);
   return (
     <div>
       {/* Header */}
@@ -44,7 +43,7 @@ function NegativeChange(props: Props) {
       <div className="flex items-center gap-2 px-2 mt-2 text-base font-medium text-center text-red-700 bg-red-100 rounded h-fit">
         <div className="text-red-700 w-[11px] h-[8px] mb-1 text-center">
           {/* DownTriangle */}
-          <TriangleSVG />
+          <DownTriangle />
         </div>
         {Change}%
       </div>

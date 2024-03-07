@@ -1,6 +1,15 @@
 import { atom } from "recoil";
-
-export  const  routeState = atom({
-    key:'routeState',
-    default:'bitcoin'
-})
+interface CoinData {
+    coin_id: number;
+    name: string;
+    symbol: string;
+    large: string;
+    price_change_percentage_24h: Record<string, number>;
+    sparkline: Record<string, string>;
+  }
+export const SparklineDataState = atom <Array<CoinData>>(
+    {
+        key: "SparklineDataState",
+        default:[] 
+    }
+)

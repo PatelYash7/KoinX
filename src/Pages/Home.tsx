@@ -1,5 +1,6 @@
 import BreadCrumb from "../Components/BreadCrumb";
 import Cardcontent from "../Components/Cardcontent";
+import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 
 function Home() {
@@ -11,8 +12,13 @@ function Home() {
       <div className="py-3 px-14">
         <BreadCrumb/>
       </div>
-      <div className=" mx-14">
+      <div className="mb-14 mx-14">
         <Cardcontent/>
+      </div>
+
+      {/* Footer */}
+      <div className="w-full bg-white px-14">
+        <Footer/>
       </div>
     </div>
   );
