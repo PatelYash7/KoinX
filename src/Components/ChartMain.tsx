@@ -19,12 +19,12 @@ function ChartMain() {
           <div className="font-semibold text-[28px]">{USD}</div>
           <div className="text-base font-medium ">{rupee}</div>
         </div>
-        <NegativeChange Change={Change} isPositive={isPositive} />
+        <ChangeComponent Change={Change} isPositive={isPositive} />
       </div>
     </div>
   );
 }
-function NegativeChange(props: Props) {
+function ChangeComponent(props: Props) {
   const { Change, isPositive } = props;
   if (isPositive) {
     return (

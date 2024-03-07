@@ -3,9 +3,6 @@ import { SparklineDataState } from "../Store/Atoms";
 import { useState } from "react";
 
 function Footer() {
-  const data = useRecoilValue(SparklineDataState);
-
-  console.log(data);
   return (
     <div className="flex flex-col gap-4 py-10 ">
       <div>
@@ -84,7 +81,6 @@ function Caraousel(props:CarouselProp) {
 // @ts-expect-error
     slider.style.transform = `translateX(${defaultTransform}px)`;
   };
-
   const goPrev = () => {
     const slider = document.getElementById(`slider${id}`);
     if (Math.abs(defaultTransform) === 0) {
