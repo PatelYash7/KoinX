@@ -10,9 +10,9 @@ import TrendingSection from "./TrendingSection";
 
 function Cardcontent() {
   return (
-    <div className="flex gap-5">
+    <div className="flex flex-wrap gap-5 tab:gap-5 tab-flex tab:flex-nowrap">
       {/* Left section */}
-      <div className=" w-[70%] h-fit">
+      <div className=" w-[100%] tab:w-[70%]  h-fit">
         <Chartsection />
         <div className="flex flex-col gap-5">
           <Navigation />
@@ -24,7 +24,7 @@ function Cardcontent() {
         </div>
       </div>
       {/* Right Section */}
-      <div className=" flex flex-col gap-5 w-[35%]">
+      <div className=" flex flex-col gap-5 tab:w-[35%] w-[100%]">
         <Offersection />
         <TrendingSection />
       </div>

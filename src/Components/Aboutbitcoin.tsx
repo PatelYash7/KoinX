@@ -5,12 +5,12 @@ import { SideArrowSVG } from "../Resources/Svg";
 function Abourbitcoin() {
   return (
     <div className="p-6 bg-white rounded-lg">
-      <div className="text-2xl font-semibold text-headingColor">Sentiment</div>
+      <div className="text-2xl font-semibold text-headingColor">About Bitcoin</div>
 
       <div className="flex flex-col gap-4 mt-6 ">
         <div className="flex flex-col border-b-2 border-b-[#C9CFDD99] gap-[10px] pb-4">
           <div className="text-lg font-bold">What is Bitcoin?</div>
-          <div className="text-base font-medium text-[#3E424A]">
+          <div className="text-base font-medium text-[#3E424A] text-justify mobile:text-left">
             Bitcoin’s price today is US$16,951.82, with a 24-hour trading volume
             of $19.14 B. BTC is +0.36% in the last 24 hours. It is currently
             -7.70% from its 7-day all-time high of $18,366.66, and 3.40% from
@@ -21,7 +21,7 @@ function Abourbitcoin() {
 
         <div className="flex flex-col border-b-2 border-b-[#C9CFDD99] gap-[10px] pb-4">
           <div className="text-lg font-bold">Lorem ipsum dolor sit amet</div>
-          <div className="text-base font-medium py-2 text-[#3E424A]">
+          <div className="text-base font-medium py-2 text-[#3E424A] text-justify mobile:text-left">
             Lorem ipsum dolor sit amet consectetur. Aliquam placerat sit
             lobortis tristique pharetra. Diam id et lectus urna et tellus
             aliquam dictum at. Viverra diam suspendisse enim facilisi diam ut
@@ -50,7 +50,7 @@ function Abourbitcoin() {
 
         <div className="flex flex-col border-b-2 border-b-[#C9CFDD99] gap-2 pb-4 mt-4">
           <div className="text-2xl font-semibold">Already Holding Bitcoin?</div>
-          <div className="flex items-center gap-4 py-4 justify-evenly">
+          <div className="flex flex-col justify-start gap-4 py-4 tab:flex-row tab:justify-evenly tab:items-center">
             <CardLeft />
             <CardRight />
           </div>
@@ -69,9 +69,9 @@ function Abourbitcoin() {
 
 function CardLeft() {
   return (
-    <div className="w-[50%] flex gap-4 bg-gradient-to-br from-[#79F1A4] to-[#0E5CAD] p-4 rounded-md">
-      <div className="flex items-center justify-center">
-        <img src={MobileImg} className="" alt="img" />
+    <div className="w-full mobile:w-[50%] flex gap-4 bg-gradient-to-br from-[#79F1A4] to-[#0E5CAD] p-4 rounded-md">
+      <div className="flex items-center justify-center ">
+        <img src={MobileImg} className="w-full h-full" alt="img" />
       </div>
 
       <div className="flex flex-col items-center">
@@ -88,9 +88,9 @@ function CardLeft() {
 }
 function CardRight() {
   return (
-    <div className="w-[50%] flex gap-4 bg-gradient-to-br from-[#FF9865] to-[#EF3031] p-4 rounded-md">
+    <div className="w-full mobile:w-[50%] flex gap-4 bg-gradient-to-br from-[#FF9865] to-[#EF3031] p-4 rounded-md">
       <div className="flex items-center justify-center">
-        <img src={MobileImg2} className="" alt="img" />
+        <img src={MobileImg2} className="w-full h-full" alt="img" />
       </div>
 
       <div className="flex flex-col items-start gap-0 pl-6">

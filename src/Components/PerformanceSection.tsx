@@ -15,9 +15,9 @@ function PerformanceSection() {
             <div className=" text-base font-medium text-[#44475B]">46,930.22</div>
           </div>
 
-          <div className="flex flex-col items-end gap-1">
+          <div className="flex flex-col items-end gap-1 ">
             <img src={RangeSlider} alt="slider" />
-            <div className="mr-28">
+            <div className="">
                 <div className="flex items-center justify-center">
                     <SliderTriangleSVG/>
                 </div>

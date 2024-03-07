@@ -1,4 +1,6 @@
 import { ExclamatorySVG, NoteSVG, SideBar, StockUpSVG } from "../Resources/Svg";
+import Lines from '../Resources/Png/Lines.png'
+
 function Sentiment() {
   return (
     <div className="p-6 bg-white rounded-lg pb-14">
@@ -11,17 +13,18 @@ function Sentiment() {
       </div>
 
       {/* Slider Comes here */}
-      <div className="flex gap-2 ">
-        <div className="flex  justify-start p-4 gap-3 rounded-xl w-[50%] my-4 bg-[#E8F4FD]">
-          <div>
+      <div className="overflow-x-auto mobile:overflow-hidden">
+      <div className="flex items-center justify-start w-[950px] gap-3 mobile:overflow-x-hidden  ">
+        <div className="flex  justify-start p-4 gap-3 rounded-xl  w-[50%] h-[200px]  my-4 bg-[#E8F4FD]">
+          <div className="h-fit w-fit">
             <NoteSVG />
           </div>
-          <div className="flex flex-col gap-2">
-            <div className="text-sm font-medium text-[#191C1F] ">
+          <div className="w-[100%] h-[100%] ">
+            <div className="text-xs font-medium mobile:text-sm   text-[#191C1F] ">
               Lorem ipsum dolor sit amet consectetur. Dui vel quis dignissim
               mattis enim tincidunt.
             </div>
-            <div className="text-sm font-medium text-[#3E5765]">
+            <div className="text-sm font-medium text-[#3E5765] py-4">
               Lorem ipsum dolor sit amet consectetur. Ac phasellus risus est
               faucibus metus quis. Amet sapien quam viverra adipiscing
               condimentum. Ac consectetur et pretium in a bibendum in. Sed vitae
@@ -29,8 +32,8 @@ function Sentiment() {
             </div>
           </div>
         </div>
-        <div className="flex  justify-start p-4 gap-3 rounded-xl w-[50%] my-4 bg-[#EBF9F4]">
-          <div>
+        <div className="flex  justify-start p-4 gap-3 rounded-xl w-[50%] h-[200px]  my-4 bg-[#EBF9F4]">
+          <div className="h-fit w-fit">
             <StockUpSVG />
           </div>
           <div className="flex flex-col gap-2">
@@ -38,7 +41,7 @@ function Sentiment() {
               Lorem ipsum dolor sit amet consectetur. Dui vel quis dignissim
               mattis enim tincidunt.
             </div>
-            <div className="text-sm font-medium text-[#3E5765]">
+            <div className="text-sm font-medium text-[#3E5765] py-4">
               Lorem ipsum dolor sit amet consectetur. Ac phasellus risus est
               faucibus metus quis. Amet sapien quam viverra adipiscing
               condimentum. Ac consectetur et pretium in a bibendum in. Sed vitae
@@ -47,7 +50,8 @@ function Sentiment() {
           </div>
         </div>
       </div>
-
+      </div>
+      
       <div className="flex items-center justify-start gap-2 mt-4">
         <div className="font-medium text-[19px] text-[#44475B]">
           Analyst Estimates
@@ -57,13 +61,18 @@ function Sentiment() {
         </div>
       </div>
 
-      <div className="flex gap-8 mt-4">
-        <div className="bg-[#EBF9F4] text-[#0FBA83] text-4xl font-medium py-10 mt-4 px-8 rounded-[60px]">
+      <div className="flex flex-col items-center justify-center gap-8 mt-3 mobile:flex-row mobile:flex ">
+        <div className="bg-[#EBF9F4] text-[#0FBA83] text-4xl px-9 py-12 font-medium w-fit mobile:py-11 mt-4 mobile:px-7 mobile:text-center rounded-full">
           79%
         </div>
-        <div className="flex flex-col items-start justify-center gap-4 p-1">
 
-          <div className="flex items-center justify-between gap-6">
+        <div>
+          <img src={Lines } alt="" />
+        </div>
+
+        <div className="hidden gap-4 p-1 mobile:flex mobile:flex-col mobile:items-start mobile:justify-center">
+
+          <div className="flex items-center justify-between gap-6 ">
             <div className="text-[#7C7E8C] text-base font-medium pr-3">Buy</div>
             <div className="flex items-start justify-between gap-2">
               <div className="flex pl-1">

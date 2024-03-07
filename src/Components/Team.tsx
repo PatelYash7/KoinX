@@ -25,7 +25,7 @@ function ProfileCard(props: Props) {
   const { Img } = props;
   return (
     <div className="bg-[#E8F4FD] rounded-lg py-4 px-4">
-      <div className="flex items-center justify-between">
+      <div className="flex-col mobile:flex mobile:items-center mobile:justify-between ">
         <div className="flex flex-col items-center w-full gap-2">
           <img src={Img} alt="img" />
           <div>
@@ -37,7 +37,7 @@ function ProfileCard(props: Props) {
             </div>
           </div>
         </div>
-        <div className=" text-sm font-normal text-[#0F1629] py-4">
+        <div className=" text-sm font-normal text-[#0F1629]">
           Lorem ipsum dolor sit amet consectetur. In justo rutrum sit sit
           fermentum ut libero hendrerit id. Tellus sit ornare netus sagittis in
           nunc convallis mattis maecenas. Tempus arcu leo sociis laoreet nec

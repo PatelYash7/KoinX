@@ -14,7 +14,7 @@ function ChartMain() {
   return (
     <div>
       {/* Header */}
-      <div className="flex justify-start gap-8">
+      <div className="flex justify-start gap-2 mobile:gap-8">
         <div className="flex flex-col items-start">
           <div className="font-semibold text-[28px]">{USD}</div>
           <div className="text-base font-medium ">{rupee}</div>

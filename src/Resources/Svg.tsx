@@ -717,8 +717,8 @@ function PieChartSVG() {
 interface DotProps {
   code: string;
 }
-function Circle(props:DotProps) {
-  const {code}= props;
+function Circle(props: DotProps) {
+  const { code } = props;
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -728,6 +728,24 @@ function Circle(props:DotProps) {
       fill="none"
     >
       <rect y="0.796875" width="12" height="12" rx="6" fill={code} />
+    </svg>
+  );
+}
+function Menu() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="28"
+      height="29"
+      viewBox="0 0 28 29"
+      fill="none"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M4.01196 9.80613V7.52148H24.5738V9.80613H4.01196ZM4.01196 15.518H24.5738V13.2334H4.01196V15.518ZM4.01196 21.2299H24.5738V18.9452H4.01196V21.2299Z"
+        fill="#0B182F"
+      />
     </svg>
   );
 }
@@ -742,5 +760,6 @@ export {
   StockUpSVG,
   SideBar,
   PieChartSVG,
-  Circle
+  Circle,
+  Menu
 };
