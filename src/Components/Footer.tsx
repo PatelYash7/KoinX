@@ -59,7 +59,7 @@ function Chart(props: ChartProps) {
         </div>
         <div className="text-[#171717] font-medium text-lg">{price.match(/^(\$\d+(\.\d+)?)/)?.[0]}</div>
         <div className="flex items-center justify-center">
-        {/*  @ts-expect-error */}
+{/*  @ts-expect-error */}
           <img src={sparkLine} alt="chart" />
         </div>
       </div>
@@ -81,18 +81,18 @@ function Caraousel(props:CarouselProp) {
     if (Math.abs(defaultTransform) >= slider.scrollWidth / 1.7) {
       setDefaultTransform(0);
     }
-    // @ts-expect-error
+// @ts-expect-error
     slider.style.transform = `translateX(${defaultTransform}px)`;
   };
 
   const goPrev = () => {
-    const slider = document.getElementById("slider");
+    const slider = document.getElementById(`slider${id}`);
     if (Math.abs(defaultTransform) === 0) {
       setDefaultTransform(0);
     } else {
       setDefaultTransform(defaultTransform + 398);
     }
-    // @ts-expect-error
+// @ts-expect-error
     slider.style.transform = `translateX(${defaultTransform}px)`;
   };
   return (
