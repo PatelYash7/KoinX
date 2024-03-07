@@ -24,13 +24,15 @@ To run the project, follow these steps:
 2. Clone this repository to your local machine.
    ```bash
    git clone https://github.com/your-username/koinx-landing-page.git
-3.Navigate to the project directory.
-```bash
-cd koinx-landing-page
-4.Install dependencies using npm.
-```bash
-npm install
-5.Run the development server.
-```bash
-npm run dev
+3. Navigate to the project directory.
+   ```bash
+   cd koinx-landing-page
+4. Install dependencies using npm.
+   ```bash
+   npm install
+5. Run the development server.
+   ```bash
+   npm run dev
+
+
 Open your browser and go to http://localhost:5173 to view the KoinX Landing Page.
