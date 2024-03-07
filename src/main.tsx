@@ -20,9 +20,7 @@ const router = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  // <React.StrictMode>
   <RecoilRoot>
     <RouterProvider router={router}/>
   </RecoilRoot>
-  // </React.StrictMode>,
 )
