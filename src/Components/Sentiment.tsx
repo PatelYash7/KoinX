@@ -1,7 +1,4 @@
 import { ExclamatorySVG, NoteSVG, SideBar, StockUpSVG } from "../Resources/Svg";
-
-import "react-multi-carousel/lib/styles.css";
-
 function Sentiment() {
   return (
     <div className="p-6 bg-white rounded-lg pb-14">

@@ -1,6 +1,5 @@
 import { useRecoilValue } from "recoil";
 import { SparklineDataState } from "../Store/Atoms";
-import "react-multi-carousel/lib/styles.css";
 import { useState } from "react";
 
 function Footer() {
@@ -35,7 +34,6 @@ interface ChartProps {
   change: number;
   price: string;
   sparkLine: Record<string, string>;
-  tokenId: number;
 }
 function Chart(props: ChartProps) {
   const { img, symbol, change, price, sparkLine } = props;
