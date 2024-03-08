@@ -73,17 +73,24 @@ function Chartsection() {
       </div>
 
       {/* Chart */}
-      <div>
-        <div className="p-[1px] mb-6 w-full  bg-[#DEE1E6]"></div>
+      {
+        path === "bitcoin"?(
+          <div>
         <div className="pb-3 text-base font-semibold">
           Bitcoin Price Chart(USD)
         </div>
-        {path === "bitcoin" ? (
           <TradingViewWidget symbol="BTC" />
-        ) : (
-          <TradingViewWidget symbol="ETH" />
-        )}
       </div>
+        ):(
+          <div>
+        <div className="pb-3 text-base font-semibold">
+          Ethereum Price Chart(USD)
+        </div>
+          <TradingViewWidget symbol="ETH" />
+      </div>
+        )
+      }
+      
     </div>
   );
 }
