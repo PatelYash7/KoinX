@@ -1,5 +1,8 @@
+import { useLocation } from "react-router-dom";
+
 function BreadCrumb() {
-  
+  const { pathname } = useLocation();
+  const path = PathSetter(pathname.substring(1));
   return (
     <div className="flex justify-start">
       <div className=" font-normal text-[#3E5765]  text-sm">
@@ -19,11 +22,25 @@ function BreadCrumb() {
           />
         </svg>
       </div>
-      <div className="text-sm  font-medium text-[##0F1629]">
+      {
+        path ==='bitcoin'?(
+          <div className="text-sm  font-medium text-[##0F1629]">
         Bitcoin
       </div>
+        ):(
+          <div className="text-sm  font-medium text-[##0F1629]">
+        Ethereum
+      </div>
+        )
+      }
     </div>
   );
 }
+const PathSetter = (path: string) => {
+  if (path === "bitcoin" || path === "") {
+    return "bitcoin";
+  }
+  return "ethereum";
+};
 
 export default BreadCrumb;

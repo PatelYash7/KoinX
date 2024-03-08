@@ -13,9 +13,9 @@ function Sentiment() {
       </div>
 
       {/* Slider Comes here */}
-      <div className="overflow-x-auto mobile:overflow-hidden">
-      <div className="flex items-center justify-start w-[950px] gap-3 mobile:overflow-x-hidden  ">
-        <div className="flex  justify-start p-4 gap-3 rounded-xl  w-[50%] h-[200px]  my-4 bg-[#E8F4FD]">
+      <div className="overflow-x-auto tab:overflow-hidden">
+      <div className="flex items-center justify-start w-[950px] gap-3  ">
+        <div className="flex  justify-start p-4 gap-3 rounded-xl  w-[45%] h-[200px]  my-4 bg-[#E8F4FD]">
           <div className="h-fit w-fit">
             <NoteSVG />
           </div>
@@ -32,7 +32,7 @@ function Sentiment() {
             </div>
           </div>
         </div>
-        <div className="flex  justify-start p-4 gap-3 rounded-xl w-[50%] h-[200px]  my-4 bg-[#EBF9F4]">
+        <div className="flex  justify-start p-4 gap-3 rounded-xl w-[45%] h-[200px]  my-4 bg-[#EBF9F4]">
           <div className="h-fit w-fit">
             <StockUpSVG />
           </div>
