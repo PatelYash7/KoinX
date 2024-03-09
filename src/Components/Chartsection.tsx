@@ -27,7 +27,7 @@ function Chartsection() {
               <img
                 src={BTC}
                 alt="logo"
-                className="w-14 tab:w-9 mobile:w-9 mobile:h-9"
+                className="w-12 tab:w-9 tab:h-9 mobile:w-9 mobile:h-9"
               />
             ) : (
               <img
