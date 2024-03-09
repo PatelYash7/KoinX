@@ -33,7 +33,7 @@ function Chartsection() {
               <img
                 src={ETH}
                 alt="logo"
-                className="w-18 tab:w-14 mobile:w-11 mobile:h-11"
+                className="w-14 h-14 tab:w-14 mobile:w-11 mobile:h-11"
               />
             )}
           </div>
