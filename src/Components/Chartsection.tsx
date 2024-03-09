@@ -53,7 +53,6 @@ function Chartsection() {
               </div>
             </div>
           )}
-
         </div>
         <div className="">
           <div className=" py-2 px-4 mobile:px-2 w-full text-sm mobile:text-base text-white font-medium rounded-md bg-[#808A9D]">
@@ -116,7 +115,6 @@ const fetchData = (coinID: string) => {
         `https://api.coingecko.com/api/v3/simple/price?ids=${coinID}&vs_currencies=inr%2Cusd&include_24hr_change=true`
       )
       .then((res: any) => {
-        console.log("first")
         setResponse(res.data[coinID]);
       });
       } catch (err) {
