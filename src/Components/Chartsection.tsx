@@ -109,13 +109,25 @@ const fetchData = (coinID: string) => {
   });
 
   useEffect(() => {
-    axios
+    const getData=async ()=>{
+      try {
+        axios
       .get(
         `https://api.coingecko.com/api/v3/simple/price?ids=${coinID}&vs_currencies=inr%2Cusd&include_24hr_change=true`
       )
       .then((res: any) => {
+        console.log("first")
         setResponse(res.data[coinID]);
       });
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    getData();
+    const Interval= setInterval(getData,60000)
+
+    // Cleanup function
+    return ()=>clearInterval(Interval);
   }, []);
 
   const rupee = NumToRup(response.inr);
