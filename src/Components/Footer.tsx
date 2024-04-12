@@ -54,7 +54,7 @@ function Chart(props: ChartProps) {
             )}
           </div>
         </div>
-        <div className="text-[#171717] font-medium text-lg">{price.match(/^(\$\d+(\.\d+)?)/)?.[0]}</div>
+        <div className="text-[#171717] font-medium text-lg">{parseFloat(price).toFixed(4)}</div>
         <div className="flex items-center justify-center">
 {/*  @ts-expect-error */}
           <img src={sparkLine} alt="chart" />
